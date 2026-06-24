@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Resumo: Ondulatória, acústica e óptica</title>
+
+    <!-- CSS do Reveal.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <!-- Tema escolhido para ficar atrativo em sala (fundo escuro e letras vibrantes) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/night.min.css">
+
+    <!-- Estilos personalizados para a aula -->
+    <style>
+        .reveal h2 {
+            text-transform: none;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #ff79c6;
+        }
+
+        .reveal h3 {
+            text-transform: none;
+            font-size: 1.6em;
+            color: #8be9fd;
+            margin-bottom: 30px;
+        }
+
+        .reveal p,
+        .reveal li {
+            font-size: 1.2em;
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        .reveal li li {
+            font-size: 0.85em;
+            /* Make nested lists smaller than parent */
+        }
+
+        .reveal ul {
+            display: block;
+            margin-left: 1.5em;
+        }
+
+        /* Layout de colunas para separar texto e imagem */
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .flex-col {
+            flex: 1;
+        }
+
+
+        /* Highlight concepts */
+        .reveal strong {
+            color: #f1fa8c;
+            /* bright yellow */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilização para as imagens de apoio */
+
+        /* Image zoom styles */
+        .slide-img {
+            cursor: zoom-in;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .img-zoomed {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) scale(1.8) !important;
+            z-index: 9999 !important;
+            max-height: 90vh !important;
+            max-width: 90vw !important;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.85), 0 0 20px rgba(0, 0, 0, 1) !important;
+            cursor: zoom-out !important;
+        }
+
+        img.slide-img {
+            max-height: 400px;
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            border: 3px solid #6272a4;
+        }
+
+        /* Slide de aviso aos professores */
+        .aviso-prof {
+            background: rgba(255, 85, 85, 0.1);
+            border: 2px dashed #ff5555;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+
+
+            <!-- Capa da apresentação -->
+            <section>
+                <h2>Revisão de Ciências</h2>
+                <p style="text-align: center; font-size: 1.2em; color: #f8f8f2;">Ondulatória, Acústica e Óptica (9º ano)
+                </p>
+            </section>
+
+            <!-- Aula 17 -->
+            <section>
+                <h3>Movimentos oscilatórios</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>O que é:</strong> movimento que vai e vem em torno de uma posição de equilíbrio.
+                            </li>
+                            <li><strong>Período (T):</strong> tempo necessário para completar uma oscilação inteira
+                                (segundos).</li>
+                            <li><strong>Frequência (f):</strong> número de oscilações que acontecem em um segundo
+                                (hertz, Hz).</li>
+                            <li><strong>Relação:</strong> f = 1 / T.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/pendulo.gif" alt="[INSERIR IMAGEM AQUI: pendulo.gif]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Exercicio Frequencia -->
+            <section>
+                <h3>Praticando: Frequência e Período</h3>
+                <div class="flex-container" style="align-items: stretch; margin-bottom: 30px;">
+                    <div class="flex-col"
+                        style="text-align: left; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; border-left: 5px solid #50fa7b;">
+                        <p style="color: #50fa7b; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">Exemplo 1
+                        </p>
+                        <p>Uma corda de violão vibra rapidamente e completa uma oscilação inteira em apenas <strong>0,05
+                                segundos</strong>. Qual é a sua frequência?</p>
+                        <p class="res-box" style="display: none; color: #f8f8f2; font-size: 0.9em; margin-top: 25px;">
+                            <em>Resolução:</em><br> f = 1 / T <br> f = 1 / 0,05 <br> <strong
+                                style="color: #50fa7b; font-size: 1.2em;">f = 20 Hz</strong>
+                        </p>
+                    </div>
+
+                    <div class="flex-col"
+                        style="text-align: left; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; border-left: 5px solid #ff79c6;">
+                        <p style="color: #ff79c6; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">Exemplo 2
+                        </p>
+                        <p>As asas de uma abelha batem tão rápido que completam um movimento de ida e volta em exatos
+                            <strong>0,01 segundos</strong>. Qual é a frequência do bater de asas da abelha?
+                        </p>
+                        <p class="res-box" style="display: none; color: #f8f8f2; font-size: 0.9em; margin-top: 25px;">
+                            <em>Resolução:</em><br> f = 1 / T <br> f = 1 / 0,01 <br> <strong
+                                style="color: #ff79c6; font-size: 1.2em;">f = 100 Hz</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    onclick="this.closest('section').querySelectorAll('.res-box').forEach(el => el.style.display = 'block'); this.style.display='none';"
+                    style="padding: 12px 24px; font-size: 0.8em; font-weight: bold; cursor: pointer; background: #6272a4; color: white; border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: background 0.3s;">Mostrar
+                    resolução</button>
+            </section>
+
+            <!-- Aula 18 -->
+            <section>
+                <h3>Elementos das ondas</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>Onda:</strong> viaja transportando <em>energia</em>, mas nunca matéria.</li>
+                            <li><strong>Mecânicas:</strong> precisam de um meio (ar, água).</li>
+                            <li><strong>Eletromagnéticas:</strong> viajam até no vácuo (luz).</li>
+                            <li><strong>Crista e vale:</strong> alto e baixo.</li>
+                            <li><strong>Amplitude (A):</strong> energia da onda (tamanho vertical).</li>
+                            <li><strong>Comprimento (λ):</strong> distância de crista a crista.</li>
+                            <li><strong>Equação:</strong> V = λ . f</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/elementos_onda.webp"
+                            alt="[INSERIR IMAGEM AQUI: elementos_onda.webp]" class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h3>Praticando: Velocidade da Onda</h3>
+                <div class="flex-container" style="align-items: stretch; margin-bottom: 30px;">
+                    <div class="flex-col"
+                        style="text-align: left; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; border-left: 5px solid #50fa7b;">
+                        <p style="color: #50fa7b; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">Exemplo 1
+                        </p>
+                        <p>Uma onda no mar tem uma distância entre cristas (comprimento de onda, λ) de <strong>2
+                                metros</strong> e bate no píer com uma frequência de <strong>5 Hz</strong>. Qual a sua
+                            velocidade de propagação?</p>
+                        <p class="res-box" style="display: none; color: #f8f8f2; font-size: 0.9em; margin-top: 25px;">
+                            <em>Resolução:</em><br> V = λ . f <br> V = 2 . 5 <br> <strong
+                                style="color: #50fa7b; font-size: 1.2em;">V = 10 m/s</strong>
+                        </p>
+                    </div>
+
+                    <div class="flex-col"
+                        style="text-align: left; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; border-left: 5px solid #ff79c6;">
+                        <p style="color: #ff79c6; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">Exemplo 2
+                        </p>
+                        <p>Uma onda sonora grave se propaga num teatro com comprimento de onda de <strong>0,5
+                                metros</strong>. Sabendo que a fonte vibrou a <strong>680 Hz</strong>, qual foi a
+                            velocidade atingida?</p>
+                        <p class="res-box" style="display: none; color: #f8f8f2; font-size: 0.9em; margin-top: 25px;">
+                            <em>Resolução:</em><br> V = λ . f <br> V = 0,5 . 680 <br> <strong
+                                style="color: #ff79c6; font-size: 1.2em;">V = 340 m/s</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    onclick="this.closest('section').querySelectorAll('.res-box').forEach(el => el.style.display = 'block'); this.style.display='none';"
+                    style="padding: 12px 24px; font-size: 0.8em; font-weight: bold; cursor: pointer; background: #6272a4; color: white; border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: background 0.3s;">Mostrar
+                    resolução</button>
+            </section>
+            <!-- Exercicio Velocidade -->
+            <section>
+                <h3>Tipos de Ondas</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li>Quanto à vibração, as ondas podem ser:</li>
+                            <li><strong>Longitudinais:</strong> a direção da propagação é paralela à vibração.</li>
+                            <li><strong>Transversais:</strong> a direção da propagação é perpendicular à vibração.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/tipos_ondas.jpg" alt="[INSERIR IMAGEM AQUI: tipos_ondas.jpg]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 19 -->
+            <section>
+                <h3>Acústica (Ondas sonoras)</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>O que é:</strong> onda mecânica produzida por vibrações. <em>Não viaja no
+                                    vácuo!</em></li>
+                            <li><strong>Velocidade:</strong> mais rápido nos sólidos > líquidos > gases.</li>
+                            <li><strong>Espectro auditivo:</strong> ouvimos de 20 Hz a 20.000 Hz.</li>
+                            <li><strong>Infrassom:</strong> abaixo de 20 Hz.</li>
+                            <li><strong>Ultrassom:</strong> acima de 20.000 Hz.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/espectro_sonoro.jpg"
+                            alt="[INSERIR IMAGEM AQUI: espectro_sonoro.jpg]" class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 20 -->
+            <section>
+                <h3>Propriedades do som</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul style="font-size: 0.85em;">
+                            <li><strong>Altura (tom):</strong> depende da frequência. Som grave (baixa) vs agudo (alta).
+                            </li>
+                            <li><strong>Intensidade (volume):</strong> depende da amplitude. Som forte vs fraco.</li>
+                            <li><strong>Timbre:</strong> é o formato único da onda. Ajuda a diferenciar instrumentos.
+                            </li>
+                            <li><strong>Reflexão:</strong> é o que causa o eco (bate e volta longe) e a reverberação
+                                (prolongamento).</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/timbre_ondas.jpg" alt="[INSERIR IMAGEM AQUI: timbre_ondas.jpg]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Intensidade Sonora e Decibéis</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li>A intensidade (volume) é medida pela <strong>amplitude</strong> da onda.</li>
+                            <li>Para facilitar, usamos a escala <strong>Decibel (dB)</strong>.</li>
+                            <li>Um som muito forte pode machucar porque carrega muita potência (energia).</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/escaladecibeis.jpg" alt="[INSERIR IMAGEM AQUI: escaladecibeis.jpg]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Difração</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>Difração</strong>: capacidade que as ondas têm de contornar obstáculos ou se
+                                espalhar ao passar por fendas.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/difracao.png" alt="[INSERIR IMAGEM AQUI: difracao.png]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+            <!-- Aula 21 -->
+            <section>
+                <h3>Natureza da luz</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>O que é:</strong> onda eletromagnética que podemos ver.</li>
+                            <li><strong>Velocidade:</strong> bate o limite do universo, chegando a incríveis 300.000
+                                km/s no vácuo.</li>
+                            <li><strong>Dualidade Onda-Partícula:</strong> a física moderna entende que a luz se
+                                comporta tanto como <em>onda</em> (ao viajar) quanto como <em>matéria/partícula</em>
+                                (fótons - pacotes de energia, quando colide). </li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/espectro_eletromagnetico.webp"
+                            alt="[INSERIR IMAGEM AQUI: espectro_eletromagnetico.webp]" class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 22 -->
+            <section>
+                <section>
+                    <h3>Fontes e Feixes de Luz</h3>
+                    <div class="flex-container">
+                        <div class="flex-col">
+                            <ul>
+                                <li><strong>Fontes Primárias:</strong> emitem luz própria (luminosos). Ex: Sol, lâmpadas
+                                    acesas.</li>
+                                <li><strong>Fontes Secundárias:</strong> apenas refletem a luz (iluminados). Ex: Lua,
+                                    caderno.</li>
+                                <li><strong>Feixes de Luz:</strong>
+                                    <ul>
+                                        <li><em>Paralelo:</em> raios viajam lado a lado.</li>
+                                        <li><em>Divergente:</em> raios se espalham a partir de um ponto.</li>
+                                        <li><em>Convergente:</em> raios se juntam em um ponto.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-col">
+                            <img src="./imagens_revisao/fontes_luz.jpg" alt="[INSERIR IMAGEM AQUI: fontes_luz.jpg]"
+                                class="slide-img">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h3>Propriedades da luz</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>Propagação retilínea:</strong> viaja em linha reta (por isso temos sombras).
+                            </li>
+                            <li><strong>Independência:</strong> raios se cruzam sem bater um no outro.</li>
+                            <li><strong>Reversibilidade:</strong> o caminho de ida da luz é o mesmo da volta (olhar pelo
+                                retrovisor).</li>
+                            <li><strong>Meios:</strong>
+                                <ul>
+                                    <li><em>Transparente:</em> visão nítida.</li>
+                                    <li><em>Translúcido:</em> visão embaçada.</li>
+                                    <li><em>Opaco:</em> barra a luz, formando sombra.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/meios_opticos.webp" alt="[INSERIR IMAGEM AQUI: meios_opticos.webp]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 23 -->
+            <section>
+                <h3>Luz e cores</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>Luz branca:</strong> a mistura completa de todas as cores.</li>
+                            <li><strong>Dispersão:</strong> quando o prisma separa a luz branca num arco-íris.</li>
+                            <li><strong>A cor das coisas:</strong> depende do que o objeto reflete. Uma camisa azul só
+                                reflete luz azul e absorve o resto. O preto absorve tudo.</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/dispersao_luz.webp" alt="[INSERIR IMAGEM AQUI: dispersao_luz.webp]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 24 -->
+            <section>
+                <section>
+                    <h3>Sistemas de Cores (RGB vs CMYK)</h3>
+                    <div class="flex-container">
+                        <div class="flex-col">
+                            <ul>
+                                <li><strong>Cores Primárias (RGB):</strong> Vermelho, Verde e Azul. Usadas nas telas de
+                                    celulares e TVs.
+                                    <ul>
+                                        <li>A mistura total da luz gera o <strong>Branco</strong>.</li>
+                                        <li>A ausência total da luz gera o <strong>Preto</strong>.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Sistemas CMYK:</strong> Ciano, Magenta, Amarelo e Preto. Usado em
+                                    impressoras de tinta. A tinta não emite luz, apenas absorve e reflete a luz.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col">
+                            <img src="./imagens_revisao/cmyk_rgb.png" alt="[INSERIR IMAGEM AQUI: cmyk_rgb.png]"
+                                class="slide-img">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h3>Reflexão da luz e Espelhos</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>Espelhos Planos:</strong> formam imagens virtuais (não projetáveis).</li>
+                            <li><strong>Espelhos Esféricos:</strong> podem aumentar ou diminuir a imagem.</li>
+                            <li><strong>Tipos de Imagem:</strong>
+                                <ul>
+                                    <li><strong>Real:</strong> invertida e projetável.</li>
+                                    <li><strong>Virtual:</strong> em pé e não projetável.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/reflexa_leis.jpg" alt="[INSERIR IMAGEM AQUI: reflexa_leis.jpg]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section>
+                <h3>Reflexão do Som (Eco e Reverberação)</h3>
+                <div class="flex-container">
+                    <div class="flex-col">
+                        <ul>
+                            <li><strong>ECO:</strong> obstáculo a <strong>mais de 17 metros</strong>. O som vai e volta
+                                demorando um pouco, assim escutamos a voz e o reflexo separados.</li>
+                            <li><strong>REVERBERAÇÃO:</strong> obstáculo a <strong>menos de 17 metros</strong>. O som
+                                bate e volta rápido e se embola com a voz (prolongamento).</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <img src="./imagens_revisao/reflexao_som.jpg" alt="[INSERIR IMAGEM AQUI: reflexao_som.jpg]"
+                            class="slide-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Encerramento -->
+            <section>
+                <h2>Fim da revisão!</h2>
+                <p style="text-align: center; color: #8be9fd;">Boa sorte nas atividades e nos estudos.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Scripts do Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            width: 1600,
+            height: 950,
+            margin: 0.02,
+            minScale: 0.2,
+            maxScale: 2.0,
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'slide',
+            controls: true,
+            progress: true
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.slide-img').forEach(function (img) {
+            img.addEventListener('click', function (e) {
+                e.stopPropagation();
+                this.classList.toggle('img-zoomed');
+            });
+        });
+    </script>
+</body>
+
+</html>
