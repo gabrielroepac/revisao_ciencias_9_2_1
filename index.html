@@ -12,6 +12,17 @@
     <!-- Tema escolhido para ficar atrativo em sala (fundo escuro e letras vibrantes) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/night.min.css">
 
+    <!-- Script de redirecionamento automático para versão mobile -->
+    <script>
+        // Checa se o usuário não forçou a versão desktop e se a tela é menor que 800px
+        const urlParams = new URLSearchParams(window.location.search);
+        const forceDesktop = urlParams.get('force_desktop');
+        
+        if (!forceDesktop && window.innerWidth < 800) {
+            window.location.replace('mobile.html');
+        }
+    </script>
+
     <!-- Estilos personalizados para a aula -->
     <style>
         .reveal h2 {
